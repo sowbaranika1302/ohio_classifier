@@ -28,12 +28,12 @@ The model is built with TensorFlow and leverages a threshold-based classificatio
 1. Clone the repository:
    ```bash
    git clone https://github.com/sowbaranika1302/ohio_classifier.git
-   cd ohio_classifier
+   cd ohio_classifier/Inference
    ```
 
 2. Build and run the Docker container:
    ```bash
-   docker build -t ohio_classifier:1.0 .
+   docker build -t sowbaranika1302/ohio_classifier:1.0 .
    ```
 
 ## Usage
@@ -43,7 +43,7 @@ You can use the `ohio_classifier` by running the Docker image and mounting your 
 ```bash
 docker run -v /path/to/local/images:/input \
            -v /path/to/local/output:/output \
-           ohio_classifier:1.0 \
+           sowbaranika1302/ohio_classifier:1.0 \
            --input_dir /input \
            --output_dir /output \
            --set_threshold 0.6 \
